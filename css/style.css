@@ -457,6 +457,7 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .features__list {
   display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: space-between;
 }
