@@ -1,0 +1,116 @@
+.header {
+    padding: 25px 0;
+    border-bottom: 1px solid #ececec;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-item {
+        margin-right: 50px;
+    }
+
+    &__menu-item.active {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            left: 0px;
+            bottom: -33px;
+            background: $accent-color;
+            border-radius: 2px;
+        
+            @media (min-width: 481px) and (max-width: 1200px) {
+                bottom: -34px;
+            }
+        }
+
+        .header__menu-link {
+            color: $accent-color;
+        }
+    }
+
+
+
+    &__menu {
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+    }
+
+    &__menu-link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: #212121;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+
+
+    &__socials {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__socials-link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: #757575;
+        margin-right: 50px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+
+        &:hover, 
+        &:focus {
+            color: $accent-color;
+        }
+    }
+
+    &__socials-icon {
+        max-height: 16px;
+        max-width: 16px;
+        fill: $primary-text-color;
+        margin-right: 10px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__socials-link:hover &__socials-icon,
+    &__socials-link:focus &__socials-icon {
+        fill: $accent-color;
+    }
+
+    // @media (max-width: 480px) {
+
+    //         padding: 15px 16px;
+    // }
+    
+    // @media (min-width: 481px) and (max-width: 1200px) {
+
+    //         padding: 25px 15px;
+    //         border-bottom: 1px solid #ececec;
+    //     }
+    
+        // &__socials {
+        //     margin-bottom: 10px;
+        // }
+    
+}

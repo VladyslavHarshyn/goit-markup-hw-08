@@ -1,0 +1,90 @@
+.portfolio {
+    padding: 94px 0;
+
+    &__filters {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__filters-unit {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        margin: 0 4px;
+        background: $background-team-color;
+        border-radius: 4px;
+        padding: 6px 22px;
+        border: none;
+    }
+
+    &__filters-unit:hover,
+    &__filters-unit:focus {
+        background-color: $accent-color;
+        color: $primary-white-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+        margin-top: 30px;
+        border: 1px solid rgba(238, 238, 238, 1);
+        max-width: 370px;
+    }
+
+    &__unit {
+        padding: 20px 24px;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        letter-spacing: 0.06;
+        color: $title-text-color;
+        text-align: left;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        text-align: left;
+    }
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__img-capture {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 24px;
+        background-color: rgba(33, 150, 243, 0.9);
+        transition: 250ms;
+    }
+
+    &__img-capture-text {
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        line-height: 28px;
+        color: $primary-white-color;
+    }
+
+    &__item:hover .portfolio__img-capture {
+        top: 0%;
+    }
+}

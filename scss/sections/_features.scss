@@ -1,0 +1,37 @@
+.features {
+    padding: 94px 0px;
+
+    &__list {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    &__list-item {
+        max-width: 270px;
+    }
+
+    &__title {
+        display: flex;
+        color: $title-text-color;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        display: flex;
+        font-weight: 400;
+        max-width: 270px;
+        line-height: 1.71;
+    }
+
+    &__icon {
+        max-width: 70px;
+        max-height: 70px;
+        background-color: $background-team-color;
+        border-radius: 4px;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+    }
+}
