@@ -184,10 +184,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .header__menu-link {
@@ -209,6 +205,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
@@ -290,6 +287,7 @@ body {
     position: relative;
     width: 40px;
     height: 40px;
+    margin-left: auto;
     z-index: 1;
   }
   .header__btn-line {
@@ -314,6 +312,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 10px;
   }
 }
 
@@ -321,11 +320,6 @@ body {
   .header {
     padding: 25px 15px;
   }
-}
-
-.header__socials {
-  margin-bottom: 10px;
-  margin-left: 50;
 }
 
 .mob-menu {
@@ -467,6 +461,14 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 1200px) {
+  .hero__text {
+    font-size: 26px;
+    line-height: 1.6;
+    max-width: 360px;
+  }
+}
+
 .hero__button {
   display: inline-block;
 }
@@ -535,17 +537,15 @@ body {
 }
 
 .features__text {
-  font-weight: 400;
-  max-width: 270px;
   line-height: 1.71;
 }
 
 .features__img {
-  width: 100%;
   background-color: #f5f4fa;
   border-radius: 4px;
   padding: 25px 0px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .features__icon {
@@ -554,25 +554,16 @@ body {
 }
 
 @media (max-width: 480px) {
-  .features__img {
-    width: 100%;
-  }
   .features__list-item {
+    width: 100%;
     margin-bottom: 30px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 1200px) {
-  .features__text {
-    max-width: 354px;
-  }
   .features__list-item {
     width: calc(50% - 15px);
     margin-bottom: 30px;
-  }
-  .features__icon {
-    width: 100%;
-    padding: 25px 100px;
   }
 }
 
@@ -582,9 +573,6 @@ body {
   }
   .features__list-item {
     width: 270px;
-  }
-  .features__icon {
-    padding: 25px 100px;
   }
 }
 
@@ -603,10 +591,16 @@ body {
   .business {
     display: none;
   }
+  .business__hide {
+    display: none;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1200px) {
   .business {
+    display: none;
+  }
+  .business__hide {
     display: none;
   }
 }
