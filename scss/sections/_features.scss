@@ -25,21 +25,23 @@
         line-height: 1.71;
     }
 
+    &__img {
+        width: 100%;
+        background-color: $background-team-color;
+        border-radius: 4px;
+        padding: 25px 0px;
+        margin-bottom: 30px;
+    }
+
     &__icon {
         width: 70px;
         height: 70px;
-        background-color: $background-team-color;
-        border-radius: 4px;
-        padding: 25px 100px;
-        margin-bottom: 30px;
-
-        
     }
 
     @media (max-width: 480px) {
-        &__icon {
+        &__img {
             width: 100%;
-            padding: 25px 0px;
+            
         }
 
         &__list-item {

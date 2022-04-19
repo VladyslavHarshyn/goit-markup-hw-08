@@ -2,10 +2,13 @@
     padding: 25px 0;
     border-bottom: 1px solid #ececec;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary-white-color;
     
     .container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
@@ -76,7 +79,6 @@
 
     &__socials {
         display: flex;
-        flex-wrap: wrap;
 
         @media (max-width: 768px) {
             display: none;
@@ -113,6 +115,30 @@
         fill: $accent-color;
     }
 
+    &__btn-line:nth-child(1) {
+        transform: translate(-50%, -7px);
+    }
+    
+    &__btn-line:nth-child(2) {
+        transform: translateX(-50%);
+    }
+    
+    &__btn-line:nth-child(3) {
+        transform: translate(-50%, 7px);
+    }
+
+    &__btn.is-open &__btn-line:nth-child(1) {
+        transform: translate(-50%, 0) rotate(45deg);
+    }
+    
+    &__btn.is-open &__btn-line:nth-child(2) {
+        width: 0;
+    }
+    
+    &__btn.is-open &__btn-line:nth-child(3) {
+        transform: translate(-50%, 0) rotate(-45deg);
+    }
+
     @media (max-width: 768px) {
         
         padding: 10px 15px;
@@ -123,18 +149,32 @@
 
 
         &__btn {
-            display: flex;
+            position: relative;
             width: 40px;
             height: 40px;
-            border: 1px solid black;
             z-index: 1;
-            position: fixed;
-           
+        }
+
+        &__btn-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            width: 24px;
+            height: 3px;
+            background-color: $title-text-color;
+            transition: $transition;
         }
     }
 
     @media (min-width: 769px) and (max-width: 1200px) {
         padding: 21px 15px;
+
+        &__socials {
+            flex-direction: column;
+        }
+
+
     }
     
     @media (min-width: 1201px) {
@@ -144,6 +184,7 @@
     
         &__socials {
             margin-bottom: 10px;
+            margin-left: 50;
         }
     
 }
@@ -237,7 +278,7 @@
     left: 0;
     background-color: $primary-white-color;
     padding: 48px 40px;
-    top: -100;
+    top: -100%;
     left: 0;
 
     }
