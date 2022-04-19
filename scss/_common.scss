@@ -5,7 +5,15 @@ body {
 }
 
 .section {
-    padding: 94px 0;
+
+    @media (max-width: 1200px) {
+        padding: 60px 15px;
+    }
+
+    @media (min-width:1201) {
+        padding: 94px 0;
+    }
+   
 }
 
 .container {
