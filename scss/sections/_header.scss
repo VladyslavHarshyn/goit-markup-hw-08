@@ -1,6 +1,8 @@
 .header {
     padding: 25px 0;
     border-bottom: 1px solid #ececec;
+    position: fixed;
+    
     .container {
         display: flex;
         justify-content: space-between;
@@ -10,10 +12,19 @@
     &__nav {
         display: flex;
         align-items: center;
+        
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__menu-item {
         margin-right: 50px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
     }
 
     &__menu-item.active {
@@ -43,7 +54,6 @@
 
     &__menu {
         display: flex;
-        flex-wrap: wrap;
         text-decoration: none;
         justify-content: space-between;
     }
@@ -67,6 +77,10 @@
     &__socials {
         display: flex;
         flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__socials-link {
@@ -99,19 +113,141 @@
         fill: $accent-color;
     }
 
-    // @media (max-width: 480px) {
+    @media (max-width: 768px) {
+        
+        padding: 10px 15px;
 
-    //         padding: 15px 16px;
-    // }
-    
-    // @media (min-width: 481px) and (max-width: 1200px) {
+        &__nav, &__socials {
+            display: none;
+        }
 
-    //         padding: 25px 15px;
-    //         border-bottom: 1px solid #ececec;
-    //     }
+
+        &__btn {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            z-index: 1;
+            position: fixed;
+           
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+        padding: 21px 15px;
+    }
     
-    //     &__socials {
-    //         margin-bottom: 10px;
-    //     }
+    @media (min-width: 1201px) {
+
+            padding: 25px 15px;
+        }
     
+        &__socials {
+            margin-bottom: 10px;
+        }
+    
+}
+
+.mob-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.is-open {
+        top: 0;
+    }
+
+    &__nav-link {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+        color: $title-text-color;
+        transition: $transition;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__nav-item {
+        margin-bottom: 32px;
+    }
+
+    &__contacts {
+        margin-bottom: 64px;
+    }
+
+    &__contacts-item {
+        margin-bottom: 32px;
+    }
+
+    &__contacts-phone {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 32px;
+        color: $accent-color;
+    }
+
+    &__contacts-mail {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: $contacts-text-color;
+        transition: $transition;
+    
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__socials {
+        display: flex;
+    }
+
+    &__socials-item {
+
+        padding: 0 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+        &:first-child {
+            padding-left: 0px;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__socials-link {
+        color: $accent-color;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+
+    @media (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $primary-white-color;
+    padding: 48px 40px;
+    top: -100;
+    left: 0;
+
+    }
+
+    @media (min-width: 769px) {
+    display: none;
+
+        &__btn {
+            display: none;
+        }
+    }
+
 }
