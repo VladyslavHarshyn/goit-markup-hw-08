@@ -117,7 +117,23 @@
 
 
     @media (min-width: 481px) and (max-width: 1200px) {
-        
+        &__insider {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        &__form {
+            display: block;
+        }
+
+        &__sign-up {
+            margin-top: 60px;
+        }
+
+        &__form-input {
+            width: 450px;
+            margin-bottom: 20px;
+        }
     }
 
 
