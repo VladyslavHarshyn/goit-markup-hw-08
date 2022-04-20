@@ -24,19 +24,15 @@
         margin-bottom: 9px;
     }
 
-    &__socials {
+    &__socials, .logo {
         max-width: 206px;
-        margin-right: 93px;
+        margin-right: 0;
     }
 
     &__insider {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
-    }
-
-    &__adds {
-        margin-right: 70px;
     }
 
     &__social-text {
@@ -75,6 +71,7 @@
         box-sizing: border-box;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
+        color: $primary-white-color;
 
         &:hover,
         &:focus {
@@ -89,7 +86,52 @@
         fill: $primary-white-color;
     }
 
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @media (max-width: 480px) {
+        &__container {
+            display: block;
+        }
 
+        &__insider {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        &__form {
+            display: block;
+        }
+
+        &__button {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        &__social-text {
+            margin-top: 60px;
+        }
+
+        &__sign-up-label {
+            margin-top: 60px;
+        }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+        
+    }
+
+
+    @media (min-width: 1201px) {
+        &__button {
+            margin-left: 12px;
+        }
+
+        &__adds {
+            margin-right: 70px;
+        }
+
+        &__sign-up {
+            margin-left: 93px;
+        }
     }
 }

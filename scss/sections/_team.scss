@@ -1,11 +1,8 @@
 .team {
-    background-color: $background-team-color;
-
-    &__list {
+    
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
 
     &__item {
         background-color: $primary-white-color;

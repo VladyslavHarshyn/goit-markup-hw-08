@@ -2,16 +2,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    @media (max-width: 480px) {
-        display: none;
-
-        &__hide {
-            display: none;
-        }
-    }
     
-    @media (min-width: 481px) and (max-width: 1200px) {
+    @media (max-width: 1200px) {
         display: none;
 
         &__hide {
@@ -19,9 +11,7 @@
         }
     }
 
-    &__section {
-        padding-bottom: 94px;
-    }
+   
 
     &__img {
         position: relative;

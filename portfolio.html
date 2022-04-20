@@ -20,10 +20,63 @@
     <!--  HEADER -->
     <header class="header">
       <div class="container">
+        <a href="./index.html" class="logo"
+          >Web<span class="logo__colored-black">Studio</span>
+        </a>
+        <!-- mob header -->
+        <div class="header__btn" data-menu-button>
+          <span class="header__btn-line"></span>
+          <span class="header__btn-line"></span>
+          <span class="header__btn-line"></span>
+        </div>
+
+        <div class="mob-menu" id="mobile-menu" data-menu>
+          <ul class="mob-menu__nav">
+            <li class="mob-menu__nav-item">
+              <a href="./index.html" class="mob-menu__nav-link">Студия</a>
+            </li>
+            <li class="mob-menu__nav-item">
+              <a href="./portfolio.html" class="mob-menu__nav-link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mob-menu__nav-item">
+              <a href="#" class="mob-menu__nav-link">Контакты</a>
+            </li>
+          </ul>
+          <div>
+            <ul class="mob-menu__contacts">
+              <li class="mob-menu__contacts-item">
+                <a href="tel:+38 096 111 11 11" class="mob-menu__contacts-phone"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu__contacts-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-menu__contacts-mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__socials">
+              <li class="mob-menu__socials-item">
+                <a href="#" class="mob-menu__socials-link">Instagram</a>
+              </li>
+              <li class="mob-menu__socials-item">
+                <a href="#" class="mob-menu__socials-link">Twitter</a>
+              </li>
+              <li class="mob-menu__socials-item">
+                <a href="#" class="mob-menu__socials-link">Facebook</a>
+              </li>
+              <li class="mob-menu__socials-item">
+                <a href="#" class="mob-menu__socials-link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- desktop header -->
         <nav class="header__nav">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo__colored-black">Studio</span></a
-          >
           <ul class="header__menu">
             <li class="header__menu-item">
               <a href="./index.html" class="header__menu-link">Студия</a>
@@ -89,7 +142,6 @@
               <img
                 src="./images/images.portfolio/img-1.jpg"
                 alt="Пример Проекта"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -109,7 +161,6 @@
               <img
                 src="./images/images.portfolio/img-2.jpg"
                 alt="Пример Проекта 2"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -129,7 +180,6 @@
               <img
                 src="./images/images.portfolio/img-3.jpg"
                 alt="Пример Проекта 3"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -149,7 +199,6 @@
               <img
                 src="./images/images.portfolio/img-4.jpg"
                 alt="Пример Проекта 4"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -169,7 +218,6 @@
               <img
                 src="./images/images.portfolio/img-5.jpg"
                 alt="Пример Проекта 5"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -189,7 +237,6 @@
               <img
                 src="./images/images.portfolio/img-6.jpg"
                 alt="Пример Проекта 6"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -209,7 +256,6 @@
               <img
                 src="./images/images.portfolio/img-7.jpg"
                 alt="Пример Проекта 7"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -229,7 +275,6 @@
               <img
                 src="./images/images.portfolio/img-8.jpg"
                 alt="Пример Проекта 8"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -249,7 +294,6 @@
               <img
                 src="./images/images.portfolio/img-9.jpg"
                 alt="Пример Проекта 9"
-                width="370"
               />
               <div class="portfolio__img-capture">
                 <p class="portfolio__img-capture-text">
@@ -269,7 +313,7 @@
     </main>
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container footer-container">
+      <div class="container footer__container">
         <div class="footer__insider">
           <div class="footer__adds">
             <a href="./index.html" class="logo"
@@ -362,7 +406,7 @@
                 id="form-footer-input"
                 placeholder="E-mail"
               />
-              <button class="button button__footer" type="submit">
+              <button class="button footer__button" type="submit">
                 Подписаться
                 <svg class="footer__btn-svg">
                   <use
@@ -375,5 +419,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
