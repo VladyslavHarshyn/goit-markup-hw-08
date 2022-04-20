@@ -1,10 +1,11 @@
 .clients {
-    padding: 94px 0;
+
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__icon {
@@ -12,6 +13,7 @@
         border: 1px solid #afb1b8;
         border-radius: 4px;
         fill: #afb1b8;
+
         transition: $transition;
 
         &:hover {
@@ -21,9 +23,10 @@
     }
 
     @media (max-width: 480px) {
-        &__section {
-            padding: 60px 15px;
-        }
+        // &__list {
+        //     padding: 60px 15px;
+        //     margin: 0 auto;
+        // }
     
         &__list-item {
             width: calc(50% - 15px);
@@ -32,13 +35,11 @@
     }
     
     @media (min-width: 481px) and (max-width: 1200px) {
-        &__section {
-            padding: 60px 15px;
-        }
     
         &__list {
             max-width: 700px;
             margin: 0 auto;
+            padding: 60px 15px;
         }
     
         &__list-item {
@@ -48,9 +49,6 @@
     }
     
     @media (min-width: 1201px) {
-        &__section {
-            padding: 94px 0;
-        }
     
         &__list-item {
             width: 170px;
